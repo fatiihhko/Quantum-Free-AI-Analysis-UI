@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Quantum Orbit Labs: light grey bg + white cards + dark typography */
+    --background: 220 18% 97%;
+    --foreground: 220 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    /* QOL accent: teal-cyan orbit feel */
+    --primary: 188 78% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 172 45% 28%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 12% 42%;
+
+    --accent: 188 50% 94%;
+    --accent-foreground: 188 78% 28%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 188 78% 48%;
+
+    --radius: 0.875rem;
+
+    /* Score palette – scientific, distinct */
+    --score-excellent: 172 52% 38%;
+    --score-good: 188 45% 35%;
+    --score-low: 38 92% 52%;
+    --score-attention: 0 72% 48%;
+
+    --surface-elevated: 0 0% 100%;
+    --surface-subtle: 220 18% 97%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(188, 78%, 48%), hsl(172, 52%, 38%));
+    --gradient-primary-soft: linear-gradient(135deg, hsl(188, 78%, 48%), hsl(172, 45%, 28%));
+    --gradient-score: linear-gradient(90deg, hsl(0, 72%, 52%), hsl(38, 92%, 52%), hsl(55, 85%, 52%), hsl(172, 52%, 38%));
+    --gradient-glass: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+
+    --shadow-card: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-elevated: 0 4px 20px -4px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.03);
+    --shadow-glow: 0 0 28px -6px hsl(188 78% 48% / 0.18);
+    --shadow-3d: 0 10px 40px -8px rgba(0, 0, 0, 0.08), 0 4px 12px -4px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    --shadow-premium: 0 24px 64px -16px rgba(0, 0, 0, 0.1), 0 12px 24px -8px rgba(0, 0, 0, 0.04);
+    --shadow-photo-frame: 0 12px 40px -8px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.04);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-score-bar {
+    background: var(--gradient-score);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-primary-soft {
+    background: var(--gradient-primary-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-3d {
+    box-shadow: var(--shadow-3d);
+  }
+
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+
+  .shadow-photo-frame {
+    box-shadow: var(--shadow-photo-frame);
+  }
+
+  .surface-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+
+  .surface-subtle {
+    background-color: hsl(var(--surface-subtle));
+  }
+
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Premium button – Quantum Orbit Labs */
+  .btn-premium {
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 14px -2px hsl(188 78% 48% / 0.35), 0 2px 6px -1px hsl(188 78% 48% / 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-premium:hover {
+    box-shadow: 0 6px 20px -2px hsl(188 78% 48% / 0.45), 0 4px 10px -1px hsl(188 78% 48% / 0.2);
+    transform: translateY(-1px);
+  }
+
+  .btn-premium:active {
+    transform: translateY(0);
+  }
+
+  /* Card 3D hover effect */
+  .card-3d {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  }
+
+  .card-3d:hover {
+    box-shadow: var(--shadow-3d);
+    transform: perspective(1000px) translateY(-2px);
+  }
+
+  /* Shimmer effect */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--primary) / 0.05) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  /* Float animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Glow pulse – QOL accent */
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px -5px hsl(188 78% 48% / 0.18); }
+    50% { box-shadow: 0 0 28px -5px hsl(188 78% 48% / 0.3); }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+}
