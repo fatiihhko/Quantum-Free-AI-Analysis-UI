@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Mustafa K abim selam sevgiler.
 
-TODO: Document your project here
+Html CSS JS kullanıldı.
