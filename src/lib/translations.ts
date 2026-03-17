@@ -73,6 +73,8 @@ const t = {
     rightCheek: "Right Cheek",
     chin: "Chin",
     eyeArea: "Eye Contour",
+    resultDiscount: "You have a $100 discount",
+    resultFairCode: "Fair2026",
   },
   de: {
     brandTag: "KI-gestützte Hautbewertung • Evidenzbasierte Metriken • Persönlicher Bericht",
@@ -138,6 +140,8 @@ const t = {
     rightCheek: "Rechte Wange",
     chin: "Kinn",
     eyeArea: "Augenkontur",
+    resultDiscount: "Sie haben 100 $ Rabatt",
+    resultFairCode: "Fair2026",
   },
   it: {
     brandTag: "Valutazione cutanea con AI • Metriche evidence-based • Report personalizzato",
@@ -203,6 +207,8 @@ const t = {
     rightCheek: "Guancia destra",
     chin: "Mento",
     eyeArea: "Contorno occhi",
+    resultDiscount: "Hai 100 dollari di sconto",
+    resultFairCode: "Fair2026",
   },
   ru: {
     brandTag: "Оценка кожи на основе ИИ • Метрики с опорой на данные • Персональный отчёт",
@@ -268,6 +274,8 @@ const t = {
     rightCheek: "Правая щека",
     chin: "Подбородок",
     eyeArea: "Контур глаз",
+    resultDiscount: "У вас скидка $100",
+    resultFairCode: "Fair2026",
   },
   tr: {
     brandTag: "AI destekli cilt değerlendirmesi • Kanıta dayalı metrikler • Kişisel rapor",
@@ -333,6 +341,8 @@ const t = {
     rightCheek: "Sağ Yanak",
     chin: "Çene",
     eyeArea: "Göz Çevresi",
+    resultDiscount: "100 dolar indiriminiz var",
+    resultFairCode: "Fair2026",
   },
 };
 

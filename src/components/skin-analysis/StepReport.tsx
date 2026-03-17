@@ -26,6 +26,15 @@ export default function StepReport({ t, onRestart }: StepReportProps) {
   const inputClasses =
     "w-full px-4 py-3 rounded-xl border border-border/60 bg-card text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/40 transition-all duration-200";
 
+  const DiscountCard = (
+    <div className="mb-6 p-4 rounded-2xl bg-card border border-primary/18 text-center shadow-elevated relative overflow-hidden">
+      <div className="absolute inset-0 shimmer pointer-events-none opacity-70" />
+      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+      <p className="text-sm font-semibold text-foreground relative">{t.resultDiscount}</p>
+      <p className="mt-2 text-xl font-display font-bold tracking-widest text-primary relative">{t.resultFairCode}</p>
+    </div>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -55,6 +64,8 @@ export default function StepReport({ t, onRestart }: StepReportProps) {
               <h2 className="text-lg font-display font-semibold text-foreground tracking-tight mb-1.5">{t.step4FormTitle}</h2>
               <p className="text-sm text-muted-foreground">{t.step4FormSub}</p>
             </motion.div>
+
+            {DiscountCard}
 
             <div className="space-y-4 p-5 sm:p-6 rounded-2xl bg-card border border-border/50 shadow-elevated">
               <div>
@@ -139,6 +150,8 @@ export default function StepReport({ t, onRestart }: StepReportProps) {
             </motion.div>
             <h2 className="text-xl font-display font-bold text-foreground mb-2">{t.step4SuccessTitle}</h2>
             <p className="text-sm text-muted-foreground mb-8">{t.step4SuccessSub}</p>
+
+            {DiscountCard}
 
             <div className="space-y-3">
               <motion.button

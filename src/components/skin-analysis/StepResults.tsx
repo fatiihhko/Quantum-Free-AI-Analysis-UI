@@ -218,6 +218,7 @@ export default function StepResults({ t, result, photo, onContinue }: StepResult
       >
         {t.ctaEmail}
       </motion.button>
+
     </motion.div>
   );
 }
